@@ -9,7 +9,7 @@ class SocketService {
   private notEnoughUsersHandlers: ((message: string) => void)[] = []
   private initiatorHandlers: ((message: boolean) => void)[] = []
   connect() {
-    this.socket = io("https://31a5-2409-40e5-11a7-a38b-7f42-75c0-4062-f7ec.ngrok-free.app", {
+    this.socket = io("https://anonmate-backend.onrender.com/", {
       transports: ["websocket"], // optionally force websocket
       secure: true
     });
