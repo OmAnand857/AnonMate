@@ -141,15 +141,12 @@ useEffect(() => {
         await webrtcService.setLocalStream(localStream);
         webrtcService.HandleConnected(() => {
           setIsConnected(true);
-          console.log("WebRTC connection established");
         });
         webrtcService.HandleLocalStream(() => {
           setLocalStreamofOtherUser(true);
-          console.log("Other user's local stream is ready");
         });
         setInitializeWebrtcService(true);
       } catch (error) {
-        console.error("Failed to initialize WebRTC:", error);
         // Optionally handle the error (e.g., show user feedback)
       }
     }
@@ -163,10 +160,8 @@ useEffect(() => {
   const sendOffer = async () => {
     if (InitializeWebrtcService && isInitiator && webrtcService && localStreamofOtherUser) {
       try {
-        console.log("Initiating WebRTC offer...");
         await webrtcService.SendOffer();
       } catch (error) {
-        console.error("Failed to send WebRTC offer:", error);
         // Optionally handle the error (e.g., show user feedback)
       }
     }
@@ -177,7 +172,6 @@ useEffect(() => {
 
 useEffect(() => {
   if (isConnected && webrtcService?.remoteStream) {
-    console.log("Setting remote stream from peer");
     setRemoteStream(webrtcService.remoteStream);
   }
 }, [isConnected, webrtcService?.remoteStream]);
@@ -192,7 +186,8 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  if( remoteStream ) console.log("remote stream############", remoteStream);
+  if( remoteStream ) {
+  }
 },[remoteStream])
 
 useEffect(() => {
@@ -279,7 +274,7 @@ useEffect(() => {
           <div className="bg-[#181A2A] p-8 rounded-2xl shadow-xl border border-blue-900/40 text-center max-w-md">
             <h2 className="text-2xl font-bold text-red-500 mb-4">Camera & Microphone Required</h2>
             <p className="text-gray-300 mb-6">
-              OMeagle requires access to your camera and microphone to connect you with others. Please allow access in your browser settings and reload the page.
+              AnonMate requires access to your camera and microphone to connect you with others. Please allow access in your browser settings and reload the page.
             </p>
             <button
               onClick={() => window.location.reload()}
@@ -296,7 +291,7 @@ useEffect(() => {
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
           <span className="text-white font-medium text-sm">{status}</span>
         </div>
-        <span className="text-xs text-blue-200 font-mono tracking-wide hidden md:block">OMeagle</span>
+        <span className="text-xs text-blue-200 font-mono tracking-wide hidden md:block">AnonMate</span>
       </div>
 
       {/* Main Content */}

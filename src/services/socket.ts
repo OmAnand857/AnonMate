@@ -15,7 +15,7 @@ class SocketService {
     });
 
     this.socket.on('connect', () => {
-      console.log('Connected to server')
+      console.log('Connected to the server')
     })
 
     this.socket.on('messageFromUser', (message: string) => {
@@ -38,12 +38,10 @@ class SocketService {
       this.initiator = message;
       this.initiatorHandlers.forEach(handler => handler(message))
       if( message===true ){
-        console.log("You are the initiator")
       }
     })
     
     this.socket.on('disconnect', () => {
-      console.log('Disconnected from server')
     })
   }
 

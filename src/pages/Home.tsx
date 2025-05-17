@@ -39,7 +39,7 @@ function Home() {
             </span>
             
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-4 px-4 leading-tight">
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">OMeagle</span>
+              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">AnonMate</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-400 mb-8 px-4 max-w-3xl mx-auto">
@@ -80,7 +80,7 @@ function Home() {
       {/* Features Section */}
       <div className="mx-auto px-4 py-20 max-w-[1400px]">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Why Choose OMeagle?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Why Choose AnonMate?</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">Experience the next generation of random chat with our cutting-edge features and commitment to user safety.</p>
         </div>
 
@@ -203,7 +203,7 @@ function Home() {
           className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-3xl p-8 md:p-16 text-center hover:scale-105 transition-transform duration-300"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready to Start?</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">Join millions of users already connecting on OMeagle. Your next meaningful conversation is just a click away.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-8">Join millions of users already connecting on AnonMate. Your next meaningful conversation is just a click away.</p>
           <button
             onClick={() => navigate('/chat')}
             className="px-8 py-4 rounded-full text-lg font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl shadow-blue-500/20"
@@ -219,7 +219,7 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {[
               {
-                title: "OMeagle",
+                title: "AnonMate",
                 items: ["Connecting hearts worldwide through meaningful conversations."]
               },
               {

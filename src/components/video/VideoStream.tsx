@@ -7,14 +7,12 @@ const VideoStream = ({ stream, isMuted = false, isLocal = false, containerRef }:
   useEffect(() => {
     const videoElement = videoRef.current;
     if (videoElement && stream) {
-      console.log(`Setting up ${isLocal ? 'local' : 'remote'} video stream with tracks:`, stream.getTracks().length);
       videoElement.srcObject = stream;
       
       // Ensure video plays when ready
       const playVideo = async () => {
         try {
           await videoElement.play();
-          console.log(`${isLocal ? 'Local' : 'Remote'} video playing`);
         } catch (e) {
           console.error('Error playing video:', e);
         }
